@@ -70,9 +70,9 @@ export default function Home() {
           
 
         </div>
-        <div className="flex h-12 w-full items-center justify-center ">
+        {/* <div className="flex h-12 w-full items-center justify-center ">
           <CardDemo/>
-        </div>
+        </div> */}
       </main>
     </div>
   );
