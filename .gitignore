@@ -1,0 +1,261 @@
+# ==========================================
+# VIBEBUDDY - ROOT GITIGNORE
+# ==========================================
+
+
+# ==========================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ==========================================
+
+.env
+.env.*
+!.env.example
+!.env.sample
+
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+service-account*.json
+
+
+# ==========================================
+# NODE.JS / NEXT.JS / REACT
+# ==========================================
+
+node_modules/
+.next/
+out/
+dist/
+build/
+
+.vercel/
+.turbo/
+
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+*.tsbuildinfo
+
+coverage/
+.nyc_output/
+
+
+# ==========================================
+# PYTHON / FASTAPI
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+pip-wheel-metadata/
+*.egg
+*.egg-info/
+.eggs/
+
+dist/
+build/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.hypothesis/
+
+.coverage
+.coverage.*
+htmlcov/
+
+celerybeat-schedule
+celerybeat.pid
+
+instance/
+.webassets-cache/
+
+
+# ==========================================
+# AI / MACHINE LEARNING
+# ==========================================
+
+# Model weights and checkpoints
+*.safetensors
+*.gguf
+*.ggml
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pb
+
+# Local datasets
+datasets/
+data/local/
+artifacts/
+checkpoints/
+
+# Experiment tracking
+mlruns/
+wandb/
+.tensorboard/
+
+# Local vector databases
+chroma_db/
+chroma/
+.faiss/
+
+# Local model caches
+.cache/huggingface/
+.cache/torch/
+.cache/transformers/
+
+
+# ==========================================
+# FLUTTER / DART
+# ==========================================
+
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Flutter generated files
+.flutter-plugins-dependencies
+**/Generated.xcconfig
+**/flutter_export_environment.sh
+
+# Android
+**/.gradle/
+**/local.properties
+**/captures/
+**/outputs/
+
+# iOS
+**/Pods/
+**/.symlinks/
+**/Flutter/ephemeral/
+**/Flutter/.last_build_id
+
+# Dart tooling
+**/doc/api/
+
+
+# ==========================================
+# DATABASE / LOCAL DEVELOPMENT
+# ==========================================
+
+*.sqlite
+*.sqlite3
+*.db
+
+# Local database backups
+*.dump
+*.bak
+
+# Local storage
+storage/local/
+uploads/local/
+
+
+# ==========================================
+# TESTING & COVERAGE
+# ==========================================
+
+coverage/
+htmlcov/
+test-results/
+playwright-report/
+playwright/.cache/
+
+.pytest_cache/
+.nyc_output/
+
+
+# ==========================================
+# LOGS & TEMPORARY FILES
+# ==========================================
+
+*.log
+logs/
+
+tmp/
+temp/
+.cache/
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+
+# ==========================================
+# IDEs & EDITORS
+# ==========================================
+
+.vscode/
+.idea/
+
+*.iml
+
+# Keep shared VS Code configuration if needed
+!.vscode/extensions.json
+!.vscode/settings.json
+
+
+# ==========================================
+# OPERATING SYSTEMS
+# ==========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.nfs*
+
+
+# ==========================================
+# DEPLOYMENT & LOCAL CONFIGURATION
+# ==========================================
+
+.vercel/
+.netlify/
+.serverless/
+
+# Docker local overrides
+docker-compose.override.yml
+
+
+# ==========================================
+# MISCELLANEOUS
+# ==========================================
+
+*.orig
+*.rej
