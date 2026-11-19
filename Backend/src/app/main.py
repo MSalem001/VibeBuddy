@@ -1,5 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from uuid import UUID, uuid4
+
+
+class test_user_in(BaseModel):
+    name: str
+    age: int
+    is_adult: bool
+
+
+class test_user_out(test_user_in):
+    id: UUID
+
 
 app = FastAPI(title="VibeBuddy app")
 origins = [
@@ -21,9 +34,9 @@ app.add_middleware(
 
 @app.get("/")
 async def greetings():
-    return "Hello, World."
+    return {"msg":"Hello, World."}
 
 
-@app.post("/test/{id}")
-async def test_endpoint(id: int):
-    return id
+@app.post("/user", response_model=test_user_out, status_code=201)
+async def create_user(user: test_user_in):
+    return {**user.model_dump(), "id": uuid4()}
