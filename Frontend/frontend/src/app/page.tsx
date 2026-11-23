@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+
 import { Button } from "../components/ui/button";
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from "../components/ui/card"
 import { useState,useEffect } from "react";
@@ -40,7 +40,7 @@ export default function Home() {
           "Content-Type":"application/json"
         },
         body:JSON.stringify({
-          name:"John Doe",
+          name:"Mustafa",
           age:30,
           is_adult:true
         }),
